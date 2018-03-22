@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="theitdepotTest(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="url" value="https://www.theitdepot.com"/>
+    <classes>
+      <class name="com.test.automation.PcBuild.TC001_Get_Price_Details">
+        <methods>
+          <include name="Get_Computer_Parts_Prices"/>
+          <include name="setup"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.test.automation.PcBuild.TC001_Get_Price_Details -->
+    </classes>
+  </test> <!-- theitdepotTest(failed) -->
+  <test thread-count="5" name="MdComputerTest(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="url" value="https://www.mdcomputers.in/"/>
+    <classes>
+      <class name="com.test.automation.PcBuild.TC001_Get_Price_Details">
+        <methods>
+          <include name="Get_Computer_Parts_Prices"/>
+          <include name="setup"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.test.automation.PcBuild.TC001_Get_Price_Details -->
+    </classes>
+  </test> <!-- MdComputerTest(failed) -->
+  <test thread-count="5" name="PrimeBgbTest(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="url" value="https://www.primeabgb.com/"/>
+    <classes>
+      <class name="com.test.automation.PcBuild.TC001_Get_Price_Details">
+        <methods>
+          <include name="Get_Computer_Parts_Prices"/>
+          <include name="setup"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.test.automation.PcBuild.TC001_Get_Price_Details -->
+    </classes>
+  </test> <!-- PrimeBgbTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->
