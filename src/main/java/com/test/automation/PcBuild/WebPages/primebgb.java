@@ -13,7 +13,7 @@ public class primebgb {
 
 	public WebDriver driver;
 	
-	@FindBy(xpath="//*[@id=\"st-container\"]/div[1]/div/div/div/div[2]/header/div/div/div/div[4]/div[1]/div[2]/div/a/span")
+	@FindBy(xpath="//*[@id='st-container']/div[1]/div/div/div/div[2]/header/div/div/div/div[4]/div[1]/div[2]/div/a/span")
 	WebElement SearchClick;
 	
 	@FindBy(xpath="//input[@value='Search for...']")

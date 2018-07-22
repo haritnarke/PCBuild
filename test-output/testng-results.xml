@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="388309" started-at="2018-03-20T16:59:20Z" finished-at="2018-03-20T17:05:48Z">
+  <suite name="Suite" duration-ms="338328" started-at="2018-07-21T14:30:42Z" finished-at="2018-07-21T14:36:21Z">
     <groups>
     </groups>
-    <test name="theitdepotTest" duration-ms="131064" started-at="2018-03-20T16:59:20Z" finished-at="2018-03-20T17:01:31Z">
+    <test name="theitdepotTest" duration-ms="175621" started-at="2018-07-21T14:30:42Z" finished-at="2018-07-21T14:33:38Z">
       <class name="com.test.automation.PcBuild.TC001_Get_Price_Details">
-        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@19963d8]" name="setup" is-config="true" duration-ms="25088" started-at="2018-03-20T16:59:20Z" finished-at="2018-03-20T16:59:45Z">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@19963d8]" name="setup" is-config="true" duration-ms="28675" started-at="2018-07-21T14:30:42Z" finished-at="2018-07-21T14:31:11Z">
           <params>
             <param index="0">
               <value>
@@ -23,19 +23,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Get_Computer_Parts_Prices()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@19963d8]" name="Get_Computer_Parts_Prices" duration-ms="105112" started-at="2018-03-20T16:59:45Z" finished-at="2018-03-20T17:01:30Z">
+        <test-method status="PASS" signature="Get_Computer_Parts_Prices()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@19963d8]" name="Get_Computer_Parts_Prices" duration-ms="144815" started-at="2018-07-21T14:31:11Z" finished-at="2018-07-21T14:33:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Get_Computer_Parts_Prices -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@19963d8]" name="endTest" is-config="true" duration-ms="821" started-at="2018-03-20T17:01:30Z" finished-at="2018-03-20T17:01:31Z">
+        <test-method status="PASS" signature="endTest()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@19963d8]" name="endTest" is-config="true" duration-ms="2081" started-at="2018-07-21T14:33:36Z" finished-at="2018-07-21T14:33:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
       </class> <!-- com.test.automation.PcBuild.TC001_Get_Price_Details -->
     </test> <!-- theitdepotTest -->
-    <test name="MdComputerTest" duration-ms="151108" started-at="2018-03-20T17:01:31Z" finished-at="2018-03-20T17:04:02Z">
+    <test name="MdComputerTest" duration-ms="78626" started-at="2018-07-21T14:33:38Z" finished-at="2018-07-21T14:34:57Z">
       <class name="com.test.automation.PcBuild.TC001_Get_Price_Details">
-        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@d4004b]" name="setup" is-config="true" duration-ms="16405" started-at="2018-03-20T17:01:31Z" finished-at="2018-03-20T17:01:47Z">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@d4004b]" name="setup" is-config="true" duration-ms="13320" started-at="2018-07-21T14:33:38Z" finished-at="2018-07-21T14:33:51Z">
           <params>
             <param index="0">
               <value>
@@ -51,19 +51,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Get_Computer_Parts_Prices()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@d4004b]" name="Get_Computer_Parts_Prices" duration-ms="132336" started-at="2018-03-20T17:01:47Z" finished-at="2018-03-20T17:04:00Z">
+        <test-method status="PASS" signature="Get_Computer_Parts_Prices()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@d4004b]" name="Get_Computer_Parts_Prices" duration-ms="64827" started-at="2018-07-21T14:33:51Z" finished-at="2018-07-21T14:34:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Get_Computer_Parts_Prices -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@d4004b]" name="endTest" is-config="true" duration-ms="2365" started-at="2018-03-20T17:04:00Z" finished-at="2018-03-20T17:04:02Z">
+        <test-method status="PASS" signature="endTest()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@d4004b]" name="endTest" is-config="true" duration-ms="477" started-at="2018-07-21T14:34:56Z" finished-at="2018-07-21T14:34:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
       </class> <!-- com.test.automation.PcBuild.TC001_Get_Price_Details -->
     </test> <!-- MdComputerTest -->
-    <test name="PrimeBgbTest" duration-ms="103936" started-at="2018-03-20T17:04:02Z" finished-at="2018-03-20T17:05:46Z">
+    <test name="PrimeBgbTest" duration-ms="82849" started-at="2018-07-21T14:34:57Z" finished-at="2018-07-21T14:36:20Z">
       <class name="com.test.automation.PcBuild.TC001_Get_Price_Details">
-        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@1846619]" name="setup" is-config="true" duration-ms="21071" started-at="2018-03-20T17:04:02Z" finished-at="2018-03-20T17:04:23Z">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@1846619]" name="setup" is-config="true" duration-ms="21472" started-at="2018-07-21T14:34:57Z" finished-at="2018-07-21T14:35:18Z">
           <params>
             <param index="0">
               <value>
@@ -79,27 +79,27 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Get_Computer_Parts_Prices()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@1846619]" name="Get_Computer_Parts_Prices" duration-ms="82482" started-at="2018-03-20T17:04:23Z" finished-at="2018-03-20T17:05:46Z">
+        <test-method status="PASS" signature="Get_Computer_Parts_Prices()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@1846619]" name="Get_Computer_Parts_Prices" duration-ms="59046" started-at="2018-07-21T14:35:18Z" finished-at="2018-07-21T14:36:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Get_Computer_Parts_Prices -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@1846619]" name="endTest" is-config="true" duration-ms="379" started-at="2018-03-20T17:05:46Z" finished-at="2018-03-20T17:05:46Z">
+        <test-method status="PASS" signature="endTest()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@1846619]" name="endTest" is-config="true" duration-ms="2319" started-at="2018-07-21T14:36:17Z" finished-at="2018-07-21T14:36:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
       </class> <!-- com.test.automation.PcBuild.TC001_Get_Price_Details -->
     </test> <!-- PrimeBgbTest -->
-    <test name="LowestPrice" duration-ms="1279" started-at="2018-03-20T17:05:46Z" finished-at="2018-03-20T17:05:48Z">
+    <test name="LowestPrice" duration-ms="501" started-at="2018-07-21T14:36:20Z" finished-at="2018-07-21T14:36:20Z">
       <class name="com.test.automation.PcBuild.TC002_Lowest_Price_Comparison">
-        <test-method status="PASS" signature="lowestprice()[pri:0, instance:com.test.automation.PcBuild.TC002_Lowest_Price_Comparison@322d26]" name="lowestprice" duration-ms="1264" started-at="2018-03-20T17:05:46Z" finished-at="2018-03-20T17:05:48Z">
+        <test-method status="PASS" signature="lowestprice()[pri:0, instance:com.test.automation.PcBuild.TC002_Lowest_Price_Comparison@322d26]" name="lowestprice" duration-ms="494" started-at="2018-07-21T14:36:20Z" finished-at="2018-07-21T14:36:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lowestprice -->
       </class> <!-- com.test.automation.PcBuild.TC002_Lowest_Price_Comparison -->
     </test> <!-- LowestPrice -->
-    <test name="TotalCosting" duration-ms="392" started-at="2018-03-20T17:05:48Z" finished-at="2018-03-20T17:05:48Z">
+    <test name="TotalCosting" duration-ms="453" started-at="2018-07-21T14:36:20Z" finished-at="2018-07-21T14:36:21Z">
       <class name="com.test.automation.PcBuild.TC0003_Total_Cost_Value">
-        <test-method status="PASS" signature="Total_Cost()[pri:0, instance:com.test.automation.PcBuild.TC0003_Total_Cost_Value@127982]" name="Total_Cost" duration-ms="377" started-at="2018-03-20T17:05:48Z" finished-at="2018-03-20T17:05:48Z">
+        <test-method status="PASS" signature="Total_Cost()[pri:0, instance:com.test.automation.PcBuild.TC0003_Total_Cost_Value@127982]" name="Total_Cost" duration-ms="450" started-at="2018-07-21T14:36:20Z" finished-at="2018-07-21T14:36:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Total_Cost -->

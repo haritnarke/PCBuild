@@ -7,7 +7,7 @@ import java.util.Date;
 
 import org.testng.annotations.*;
 
-import com.test.automation.PcBuild.Config.ReadPropertiesFile;
+//import com.test.automation.PcBuild.Config.ReadPropertiesFile;
 import com.test.automation.PcBuild.ExcelReader.ReadWriteExcelFile;
 import com.test.automation.PcBuild.Logical.LowestPriceComparison;
 import com.test.automation.PcBuild.TestBase.TestBase;

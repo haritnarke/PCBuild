@@ -16,7 +16,7 @@ public class theitdepot extends ReadPropertiesFile {
 
 	public WebDriver driver;
 
-	@FindBy(xpath="//input[@class='search-field']")
+	@FindBy(xpath="//input[@class='search-field ac_input']")
 	WebElement SearchField;
 
 	@FindBy(className = "search-button")
@@ -27,10 +27,10 @@ public class theitdepot extends ReadPropertiesFile {
 
 	@FindBy(xpath = "//button[text()='Add to cart']")
 	WebElement AddToCart;
-	@FindBy(xpath = "//*[@data-snapmint-price]")
+	@FindBy(xpath = "//*[@class='price-container info-container']/div/div/div/div/span[1]")
 	WebElement PriceForTheProduct;
 
-	@FindBy(xpath = "/html/body/header/div[2]/div/div/div[1]/div/a/img")
+	@FindBy(xpath ="/html/body/header/div[1]/div/div/div[1]/div/a/img")
 	WebElement HomePage;
 
 	
@@ -63,8 +63,10 @@ public class theitdepot extends ReadPropertiesFile {
 
 	public String prices() {
 
-		String CpuPrice = PriceForTheProduct.getAttribute("data-snapmint-price");
-		return CpuPrice;
+		String CpuPrice = PriceForTheProduct.getText();
+		String LatestPrice = CpuPrice.substring(3, CpuPrice.length()-2);
+	
+		return LatestPrice;
 
 	}
 
