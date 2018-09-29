@@ -1,0 +1,12 @@
+com\test\automation\PcBuild\Logical\TotalCostingCalculationLogic.class
+com\test\automation\PcBuild\WebPages\amazon.class
+com\test\automation\PcBuild\WebPages\primebgb.class
+com\test\automation\PcBuild\Logical\LowestPriceComparison.class
+com\test\automation\PcBuild\TestBase\SendingMail.class
+com\test\automation\PcBuild\WebPages\mdcomputers.class
+com\test\automation\PcBuild\TestBase\SendingMail$1.class
+com\test\automation\PcBuild\Config\ReadPropertiesFile.class
+com\test\automation\PcBuild\ExcelReader\ReadWriteExcelFile.class
+com\test\automation\PcBuild\WebPages\Get_Ryzen_Cpu_Price.class
+com\test\automation\PcBuild\WebPages\theitdepot.class
+com\test\automation\PcBuild\TestBase\TestBase.class
