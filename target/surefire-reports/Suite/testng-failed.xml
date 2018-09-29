@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Suite]">
+  <parameter name="browser" value="Chrome"/>
+  <parameter name="url" value="https://www.primeabgb.com/"/>
+  <test name="PrimeBgbTest(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <parameter name="url" value="https://www.primeabgb.com/"/>
+    <classes>
+      <class name="com.test.automation.PcBuild.TC001_Get_Price_Details">
+        <methods>
+          <include name="Get_Computer_Parts_Prices"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="endTest"/>
+          <include name="endTest"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.test.automation.PcBuild.TC001_Get_Price_Details -->
+    </classes>
+  </test> <!-- PrimeBgbTest(failed) -->
+  <test name="LowestPrice(failed)">
+    <classes>
+      <class name="com.test.automation.PcBuild.TC002_Lowest_Price_Comparison">
+        <methods>
+          <include name="lowestprice"/>
+        </methods>
+      </class> <!-- com.test.automation.PcBuild.TC002_Lowest_Price_Comparison -->
+      <class name="com.test.automation.PcBuild.TC001_Get_Price_Details">
+        <methods>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="endTest"/>
+          <include name="endTest"/>
+          <include name="endTest"/>
+        </methods>
+      </class> <!-- com.test.automation.PcBuild.TC001_Get_Price_Details -->
+    </classes>
+  </test> <!-- LowestPrice(failed) -->
+</suite> <!-- Failed suite [Suite] -->
