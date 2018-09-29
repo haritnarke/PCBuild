@@ -157,8 +157,10 @@ public class TC001_Get_Price_Details extends TestBase {
 			MDComputers.mainpage();
 
 		} else if (GetTitle().contains("primeabgb")) {
+			
 			primebgb PrimeBGB = new primebgb(driver);
 			WriteDataInExcel(8);
+			System.out.println("PrimeAbgb");
 			
 			
 			// Processor

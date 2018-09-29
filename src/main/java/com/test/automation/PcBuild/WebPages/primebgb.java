@@ -53,7 +53,9 @@ public class primebgb {
 	public void getproductprices(String propertiesValue) {
 
 		waitcondition();
-		SearchClick.click();
+		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click()", SearchClick);
+		//SearchClick.click();
 		SearchField.sendKeys(propertiesValue);
 		SearchSubmit.click();
 		
