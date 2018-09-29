@@ -1,18 +1,18 @@
 package com.test.automation.PcBuild.WebPages;
 
-import java.io.IOException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.test.automation.PcBuild.Config.ReadPropertiesFile;
 
-public class theitdepot extends ReadPropertiesFile {
+
+
+
+public class theitdepot extends  ReadPropertiesFile{
 
 	public WebDriver driver;
 
@@ -56,7 +56,7 @@ public class theitdepot extends ReadPropertiesFile {
 		SearchField.sendKeys(productsearch);
 		SearchClick.click();
 		scrolldown(400);
-		driver.findElement(By.xpath("//img[contains(@title,'"+productsearch+"')]")).click();;
+		driver.findElement(By.xpath("(//img[contains(@title,'"+productsearch+"')])[1]")).click();;
 
 		
 	}

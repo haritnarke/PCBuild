@@ -6,19 +6,18 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-//import com.test.automation.PcBuild.Config.ReadPropertiesFile;
 import com.test.automation.PcBuild.ExcelReader.ReadWriteExcelFile;
 import com.test.automation.PcBuild.Logical.LowestPriceComparison;
 import com.test.automation.PcBuild.TestBase.TestBase;
 import com.test.automation.PcBuild.WebPages.amazon;
 import com.test.automation.PcBuild.WebPages.mdcomputers;
 import com.test.automation.PcBuild.WebPages.primebgb;
+//import com.test.automation.PcBuild.Config.ReadPropertiesFile;
 import com.test.automation.PcBuild.WebPages.theitdepot;
 
 public class TC001_Get_Price_Details extends TestBase {
