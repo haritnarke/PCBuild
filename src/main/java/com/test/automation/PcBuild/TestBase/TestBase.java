@@ -8,22 +8,35 @@ import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.poi.hssf.usermodel.HSSFSheet;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import javax.xml.stream.events.EndDocument;
+
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.ss.usermodel.BorderStyle;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.IndexedColors;
+import org.apache.poi.util.Units;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbookType;
+import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
+import org.apache.poi.xwpf.usermodel.ParagraphAlignment;
+import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.apache.poi.xwpf.usermodel.XWPFParagraph;
+import org.apache.poi.xwpf.usermodel.XWPFPicture;
+import org.apache.poi.xwpf.usermodel.XWPFPictureData;
+import org.apache.poi.xwpf.usermodel.XWPFRun;
+import org.apache.xmlbeans.XmlCursor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.io.FileHandler;
 
 import com.test.automation.PcBuild.Config.ReadPropertiesFile;
 
@@ -36,16 +49,18 @@ public class TestBase extends ReadPropertiesFile {
 	public XSSFSheet sheet1;
 	public XSSFRow row;
 	public XSSFCell col;
+
 	DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
 	Date date = new Date();
 	public String currentdate = dateFormat.format(date);
 
-	public String excelpath1 = "C:\\Users\\madhav\\eclipse-workspace\\PcBuild\\src\\main\\java\\com\\test\\automation\\PcBuild\\DataFolder\\LowestPriceLists_"+currentdate+".xlsx";
+	public String excelpath1 = "C:\\Users\\madhav\\eclipse-workspace\\PcBuild\\src\\main\\java\\com\\test\\automation\\PcBuild\\DataFolder\\LowestPriceLists_"
+			+ currentdate + ".xlsx";
 
-	public String excelpath = "C:\\Users\\madhav\\eclipse-workspace\\PcBuild\\src\\main\\java\\com\\test\\automation\\PcBuild\\DataFolder\\PriceLists_"+currentdate+".xlsx";
+	public String excelpath = "C:\\Users\\madhav\\eclipse-workspace\\PcBuild\\src\\main\\java\\com\\test\\automation\\PcBuild\\DataFolder\\PriceLists_"
+			+ currentdate + ".xlsx";
+	private XmlCursor END;
 
-	
-	
 	public void SelectBrowser(String browser, String url) throws IOException {
 
 		if (browser.equals("Chrome")) {
@@ -103,8 +118,6 @@ public class TestBase extends ReadPropertiesFile {
 		driver.close();
 	}
 
-	
-	
 	public void ReadWriteExcelFile(String excelpath) {
 		// TODO Auto-generated constructor stub
 		File src = new File(excelpath);
@@ -126,7 +139,7 @@ public class TestBase extends ReadPropertiesFile {
 	// Creating an excelfile and an empty row
 	public void CreateExcelFile(int i) {
 
-		//System.out.println(d);
+		// System.out.println(d);
 		File srcfile = new File(excelpath);
 
 		try {
@@ -147,9 +160,9 @@ public class TestBase extends ReadPropertiesFile {
 			// TODO Auto-generated catch block
 			System.out.println("File Not Found During Writing Data");
 			e.printStackTrace();
-			
-	}
-		
+
+		}
+
 		try {
 			fileOut.close();
 		} catch (IOException e) {
@@ -159,13 +172,9 @@ public class TestBase extends ReadPropertiesFile {
 
 	}
 
-		
-
-	
-	
 	public void CreateLowestPriceExcelFile(int i) {
 
-		//System.out.println(d);
+		// System.out.println(d);
 		File srcfile = new File(excelpath1);
 
 		try {
@@ -188,7 +197,7 @@ public class TestBase extends ReadPropertiesFile {
 			e.printStackTrace();
 
 		}
-		
+
 		try {
 			fileOut.close();
 		} catch (IOException e) {
@@ -198,13 +207,9 @@ public class TestBase extends ReadPropertiesFile {
 
 	}
 
+	public void Createrow(int i) {
 
-	
-	
-	public void Createrow(int i)
-	{
-		
-	File srcfile = new File(excelpath);
+		File srcfile = new File(excelpath);
 		try {
 			fis = new FileInputStream(srcfile);
 		} catch (FileNotFoundException e) {
@@ -233,8 +238,6 @@ public class TestBase extends ReadPropertiesFile {
 			e.printStackTrace();
 		}
 
-		
-		
 		try {
 			workbook.write(fileOut);
 		} catch (IOException e) {
@@ -243,7 +246,7 @@ public class TestBase extends ReadPropertiesFile {
 			e.printStackTrace();
 
 		}
-		
+
 		try {
 			fileOut.close();
 		} catch (IOException e) {
@@ -251,14 +254,11 @@ public class TestBase extends ReadPropertiesFile {
 			e.printStackTrace();
 		}
 
-		
 	}
-	
 
-	public void Createroww(int i)
-	{
-		
-	File srcfile = new File(excelpath1);
+	public void Createroww(int i) {
+
+		File srcfile = new File(excelpath1);
 		try {
 			fis = new FileInputStream(srcfile);
 		} catch (FileNotFoundException e) {
@@ -287,8 +287,6 @@ public class TestBase extends ReadPropertiesFile {
 			e.printStackTrace();
 		}
 
-		
-		
 		try {
 			workbook.write(fileOut);
 		} catch (IOException e) {
@@ -297,7 +295,7 @@ public class TestBase extends ReadPropertiesFile {
 			e.printStackTrace();
 
 		}
-		
+
 		try {
 			fileOut.close();
 		} catch (IOException e) {
@@ -305,11 +303,8 @@ public class TestBase extends ReadPropertiesFile {
 			e.printStackTrace();
 		}
 
-		
 	}
-	
 
-	
 	public void WriteDataInExcel(int i) {
 
 		// Load the excel file
@@ -352,7 +347,6 @@ public class TestBase extends ReadPropertiesFile {
 
 		}
 
-		
 		try {
 			fileOut.close();
 		} catch (IOException e) {
@@ -361,8 +355,7 @@ public class TestBase extends ReadPropertiesFile {
 		}
 	}
 
-	
-	public void WriteDataInExcel(int i,String excelpath) {
+	public void WriteDataInExcel(int i, String excelpath) {
 
 		// Load the excel file
 		File srcfile = new File(excelpath1);
@@ -404,7 +397,6 @@ public class TestBase extends ReadPropertiesFile {
 
 		}
 
-		
 		try {
 			fileOut.close();
 		} catch (IOException e) {
@@ -413,10 +405,8 @@ public class TestBase extends ReadPropertiesFile {
 		}
 	}
 
-
-	
-	
-	public void WriteDataInExcel(String Company,String Product,String Price,String Date,int col,int row,String excelpath) throws IOException {
+	public void WriteDataInExcel(String Company, String Product, String Price, String Date, int col, int row,
+			String excelpath) throws IOException {
 
 		// Load the excel file
 		File srcfile = new File(excelpath);
@@ -435,7 +425,7 @@ public class TestBase extends ReadPropertiesFile {
 		}
 
 		// System.out.println("Sheet Already Exist");
-		//int i=0;
+		// int i=0;
 		sheet1 = workbook.getSheet("Prices");
 		sheet1.getRow(row).createCell(col).setCellValue(PropertiesValue(Company));
 		sheet1.getRow(row).createCell(++col).setCellValue(PropertiesValue(Product));
@@ -459,14 +449,11 @@ public class TestBase extends ReadPropertiesFile {
 
 		}
 
-		
 		fileOut.close();
 	}
 
-
-	
-	
-	public void WriteDataInExcel(String Company,String Product,int Price,String Date,int row,String excelpath1) throws IOException {
+	public void WriteDataInExcel(String Company, String Product, int Price, String Date, int row, String excelpath1)
+			throws IOException {
 
 		// Load the excel file
 		File srcfile = new File(excelpath1);
@@ -485,44 +472,41 @@ public class TestBase extends ReadPropertiesFile {
 		}
 
 		// System.out.println("Sheet Already Exist");
-		//int i=0;
-		
+		// int i=0;
+
 		XSSFSheet sheet2 = workbook.getSheet("Prices");
-		//this.sheet1 = sheet1;
-		
-CellStyle style = workbook.createCellStyle();
-		
+		// this.sheet1 = sheet1;
+
+		CellStyle style = workbook.createCellStyle();
+
 		style.setBorderRight(BorderStyle.THIN);
-	    style.setRightBorderColor(IndexedColors.BLACK.getIndex());
-	    style.setBorderLeft(BorderStyle.THIN);
-	    style.setLeftBorderColor(IndexedColors.BLACK.getIndex());
-	    style.setBorderTop(BorderStyle.THIN);
-	    style.setTopBorderColor(IndexedColors.BLACK.getIndex());
-	    style.setBorderBottom(BorderStyle.THIN);
-	    style.setBottomBorderColor(IndexedColors.BLACK.getIndex());
-		
-		
+		style.setRightBorderColor(IndexedColors.BLACK.getIndex());
+		style.setBorderLeft(BorderStyle.THIN);
+		style.setLeftBorderColor(IndexedColors.BLACK.getIndex());
+		style.setBorderTop(BorderStyle.THIN);
+		style.setTopBorderColor(IndexedColors.BLACK.getIndex());
+		style.setBorderBottom(BorderStyle.THIN);
+		style.setBottomBorderColor(IndexedColors.BLACK.getIndex());
+
 		XSSFRow row1 = sheet2.createRow(row);
-		
-		
+
 		sheet2.getRow(0).getCell(0).setCellStyle(style);
 		sheet2.getRow(0).getCell(1).setCellStyle(style);
 		sheet2.getRow(0).getCell(2).setCellStyle(style);
 		sheet2.getRow(0).getCell(3).setCellStyle(style);
-		
-		
+
 		sheet2.getRow(row).createCell(0).setCellValue(Company);
 		sheet2.getRow(row).getCell(0).setCellStyle(style);
-		
+
 		sheet2.getRow(row).createCell(1).setCellValue(Product);
 		sheet2.getRow(row).getCell(1).setCellStyle(style);
-		
+
 		sheet2.getRow(row).createCell(2).setCellValue(Price);
 		sheet2.getRow(row).getCell(2).setCellStyle(style);
-		
+
 		sheet2.getRow(row).createCell(3).setCellValue(Date);
 		sheet2.getRow(row).getCell(3).setCellStyle(style);
-		
+
 		try {
 			fileOut = new FileOutputStream(srcfile);
 		} catch (FileNotFoundException e1) {
@@ -539,16 +523,11 @@ CellStyle style = workbook.createCellStyle();
 
 		}
 
-		
 		fileOut.close();
 	}
 
-
-	
-	
 	public String getdata(String sheetname, int rownum, int column) {
 
-		
 		sheet1 = workbook.getSheet(sheetname);
 
 		if (rownum > getrow(sheetname) && column > getcol(sheetname)) {
@@ -572,10 +551,62 @@ CellStyle style = workbook.createCellStyle();
 	}
 
 	public String formatprice(String price) {
-		
-		 String formatedprice = price.replaceAll(".00","");
-		 return formatedprice;
+
+		String formatedprice = price.replaceAll(".00", "");
+		return formatedprice;
 	}
-	
-	
+
+	public void captureScreenShot(String FileName) throws IOException, InvalidFormatException {
+
+		TakesScreenshot tc = (TakesScreenshot) driver;
+		File fs = tc.getScreenshotAs(OutputType.FILE);
+		File destination = new File("ScreenShots//" + FileName + ".jpg");
+		try {
+			FileHandler.copy(fs, destination);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		FileInputStream inputImage = new FileInputStream(destination);
+
+		File file = new File("DailyPriceCapture-"+currentdate+".docx");
+
+		if (file.exists()) {
+
+			FileInputStream fileInput = new FileInputStream(file);
+			XWPFDocument doc = new XWPFDocument(fileInput);
+			// create para and run
+			XWPFParagraph paragraph = doc.createParagraph();
+			XWPFRun run = paragraph.createRun();
+			paragraph.setAlignment(ParagraphAlignment.BOTH);
+			run.addBreak();
+			run.addPicture(inputImage, XWPFDocument.PICTURE_TYPE_JPEG, "image file", Units.toEMU(600),
+					Units.toEMU(400)); // 200x200
+			run.addBreak();
+			run.setText(FileName); // pixels
+			FileOutputStream fos = new FileOutputStream(file);
+			doc.write(fos);
+			fos.close();
+			fileInput.close();
+
+		} else {
+
+			file.createNewFile();
+			XWPFDocument docx = new XWPFDocument();
+			XWPFParagraph par = docx.createParagraph();
+			XWPFRun run = par.createRun();
+			par.setAlignment(ParagraphAlignment.BOTH);
+			run.addBreak();
+			run.addPicture(inputImage, XWPFDocument.PICTURE_TYPE_JPEG, "image file", Units.toEMU(500),Units.toEMU(400)); // 200x200
+			run.addBreak();
+			run.setText(FileName); // pixels
+			FileOutputStream fos = new FileOutputStream(file);
+			docx.write(fos);
+			fos.close();
+
+		}
+
 	}
+
+}

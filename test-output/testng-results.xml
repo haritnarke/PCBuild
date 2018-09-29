@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+<testng-results skipped="0" failed="3" ignored="0" total="5" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="338328" started-at="2018-07-21T14:30:42Z" finished-at="2018-07-21T14:36:21Z">
+  <suite name="Suite" duration-ms="137803" started-at="2018-09-20T17:00:07Z" finished-at="2018-09-20T17:02:24Z">
     <groups>
+      <group name="Functional">
+        <method signature="TC001_Get_Price_Details.Get_Computer_Parts_Prices()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@1805618]" name="Get_Computer_Parts_Prices" class="com.test.automation.PcBuild.TC001_Get_Price_Details"/>
+        <method signature="TC001_Get_Price_Details.Get_Computer_Parts_Prices()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@a86356]" name="Get_Computer_Parts_Prices" class="com.test.automation.PcBuild.TC001_Get_Price_Details"/>
+        <method signature="TC001_Get_Price_Details.Get_Computer_Parts_Prices()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@1423665]" name="Get_Computer_Parts_Prices" class="com.test.automation.PcBuild.TC001_Get_Price_Details"/>
+      </group> <!-- Functional -->
     </groups>
-    <test name="theitdepotTest" duration-ms="175621" started-at="2018-07-21T14:30:42Z" finished-at="2018-07-21T14:33:38Z">
+    <test name="theitdepotTest" duration-ms="62528" started-at="2018-09-20T17:00:07Z" finished-at="2018-09-20T17:01:09Z">
       <class name="com.test.automation.PcBuild.TC001_Get_Price_Details">
-        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@19963d8]" name="setup" is-config="true" duration-ms="28675" started-at="2018-07-21T14:30:42Z" finished-at="2018-07-21T14:31:11Z">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@1805618]" name="setup" is-config="true" duration-ms="23370" started-at="2018-09-20T17:00:07Z" finished-at="2018-09-20T17:00:30Z">
           <params>
             <param index="0">
               <value>
@@ -23,19 +28,91 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Get_Computer_Parts_Prices()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@19963d8]" name="Get_Computer_Parts_Prices" duration-ms="144815" started-at="2018-07-21T14:31:11Z" finished-at="2018-07-21T14:33:36Z">
+        <test-method status="FAIL" signature="Get_Computer_Parts_Prices()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@1805618]" name="Get_Computer_Parts_Prices" duration-ms="37030" started-at="2018-09-20T17:00:30Z" finished-at="2018-09-20T17:01:07Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//img[contains(@title,'AMD RYZEN 5 2600X PROCESSOR')]"}
+  (Session info: chrome=69.0.3497.100)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'MADHAV-PC', ip: '192.168.1.113', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\madhav\AppData\Loc...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 69.0.3497.100, webStorageEnabled: true}
+Session ID: 744d83753e540af8fac1024244483802
+*** Element info: {Using=xpath, value=//img[contains(@title,'AMD RYZEN 5 2600X PROCESSOR')]}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//img[contains(@title,'AMD RYZEN 5 2600X PROCESSOR')]"}
+  (Session info: chrome=69.0.3497.100)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 6.1.7601 SP1 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'MADHAV-PC', ip: '192.168.1.113', os.name: 'Windows 7', os.arch: 'x86', os.version: '6.1', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.36.540470 (e522d04694c7eb..., userDataDir: C:\Users\madhav\AppData\Loc...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 69.0.3497.100, webStorageEnabled: true}
+Session ID: 744d83753e540af8fac1024244483802
+*** Element info: {Using=xpath, value=//img[contains(@title,'AMD RYZEN 5 2600X PROCESSOR')]}
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+at com.test.automation.PcBuild.WebPages.theitdepot.GenericFunctionGetPrice(theitdepot.java:59)
+at com.test.automation.PcBuild.TC001_Get_Price_Details.Get_Computer_Parts_Prices(TC001_Get_Price_Details.java:56)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Get_Computer_Parts_Prices -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@19963d8]" name="endTest" is-config="true" duration-ms="2081" started-at="2018-07-21T14:33:36Z" finished-at="2018-07-21T14:33:38Z">
+        <test-method status="PASS" signature="endTest()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@1805618]" name="endTest" is-config="true" duration-ms="2086" started-at="2018-09-20T17:01:07Z" finished-at="2018-09-20T17:01:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
       </class> <!-- com.test.automation.PcBuild.TC001_Get_Price_Details -->
     </test> <!-- theitdepotTest -->
-    <test name="MdComputerTest" duration-ms="78626" started-at="2018-07-21T14:33:38Z" finished-at="2018-07-21T14:34:57Z">
+    <test name="MdComputerTest" duration-ms="29723" started-at="2018-09-20T17:01:09Z" finished-at="2018-09-20T17:01:39Z">
       <class name="com.test.automation.PcBuild.TC001_Get_Price_Details">
-        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@d4004b]" name="setup" is-config="true" duration-ms="13320" started-at="2018-07-21T14:33:38Z" finished-at="2018-07-21T14:33:51Z">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@a86356]" name="setup" is-config="true" duration-ms="12681" started-at="2018-09-20T17:01:09Z" finished-at="2018-09-20T17:01:22Z">
           <params>
             <param index="0">
               <value>
@@ -51,19 +128,52 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Get_Computer_Parts_Prices()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@d4004b]" name="Get_Computer_Parts_Prices" duration-ms="64827" started-at="2018-07-21T14:33:51Z" finished-at="2018-07-21T14:34:56Z">
+        <test-method status="FAIL" signature="Get_Computer_Parts_Prices()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@a86356]" name="Get_Computer_Parts_Prices" duration-ms="16820" started-at="2018-09-20T17:01:22Z" finished-at="2018-09-20T17:01:39Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.test.automation.PcBuild.TestBase.TestBase.WriteDataInExcel(TestBase.java:430)
+at com.test.automation.PcBuild.TC001_Get_Price_Details.Get_Computer_Parts_Prices(TC001_Get_Price_Details.java:118)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Get_Computer_Parts_Prices -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@d4004b]" name="endTest" is-config="true" duration-ms="477" started-at="2018-07-21T14:34:56Z" finished-at="2018-07-21T14:34:57Z">
+        <test-method status="PASS" signature="endTest()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@a86356]" name="endTest" is-config="true" duration-ms="218" started-at="2018-09-20T17:01:39Z" finished-at="2018-09-20T17:01:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
       </class> <!-- com.test.automation.PcBuild.TC001_Get_Price_Details -->
     </test> <!-- MdComputerTest -->
-    <test name="PrimeBgbTest" duration-ms="82849" started-at="2018-07-21T14:34:57Z" finished-at="2018-07-21T14:36:20Z">
+    <test name="PrimeBgbTest" duration-ms="38772" started-at="2018-09-20T17:01:39Z" finished-at="2018-09-20T17:02:18Z">
       <class name="com.test.automation.PcBuild.TC001_Get_Price_Details">
-        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@1846619]" name="setup" is-config="true" duration-ms="21472" started-at="2018-07-21T14:34:57Z" finished-at="2018-07-21T14:35:18Z">
+        <test-method status="PASS" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@1423665]" name="setup" is-config="true" duration-ms="27638" started-at="2018-09-20T17:01:39Z" finished-at="2018-09-20T17:02:07Z">
           <params>
             <param index="0">
               <value>
@@ -79,27 +189,60 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Get_Computer_Parts_Prices()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@1846619]" name="Get_Computer_Parts_Prices" duration-ms="59046" started-at="2018-07-21T14:35:18Z" finished-at="2018-07-21T14:36:17Z">
+        <test-method status="FAIL" signature="Get_Computer_Parts_Prices()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@1423665]" name="Get_Computer_Parts_Prices" duration-ms="10787" started-at="2018-09-20T17:02:07Z" finished-at="2018-09-20T17:02:18Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+at com.test.automation.PcBuild.TestBase.TestBase.WriteDataInExcel(TestBase.java:430)
+at com.test.automation.PcBuild.TC001_Get_Price_Details.Get_Computer_Parts_Prices(TC001_Get_Price_Details.java:170)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Get_Computer_Parts_Prices -->
-        <test-method status="PASS" signature="endTest()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@1846619]" name="endTest" is-config="true" duration-ms="2319" started-at="2018-07-21T14:36:17Z" finished-at="2018-07-21T14:36:20Z">
+        <test-method status="PASS" signature="endTest()[pri:0, instance:com.test.automation.PcBuild.TC001_Get_Price_Details@1423665]" name="endTest" is-config="true" duration-ms="344" started-at="2018-09-20T17:02:18Z" finished-at="2018-09-20T17:02:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endTest -->
       </class> <!-- com.test.automation.PcBuild.TC001_Get_Price_Details -->
     </test> <!-- PrimeBgbTest -->
-    <test name="LowestPrice" duration-ms="501" started-at="2018-07-21T14:36:20Z" finished-at="2018-07-21T14:36:20Z">
+    <test name="LowestPrice" duration-ms="94" started-at="2018-09-20T17:02:18Z" finished-at="2018-09-20T17:02:18Z">
       <class name="com.test.automation.PcBuild.TC002_Lowest_Price_Comparison">
-        <test-method status="PASS" signature="lowestprice()[pri:0, instance:com.test.automation.PcBuild.TC002_Lowest_Price_Comparison@322d26]" name="lowestprice" duration-ms="494" started-at="2018-07-21T14:36:20Z" finished-at="2018-07-21T14:36:20Z">
+        <test-method status="PASS" signature="lowestprice()[pri:0, instance:com.test.automation.PcBuild.TC002_Lowest_Price_Comparison@17b4f4c]" name="lowestprice" duration-ms="94" started-at="2018-09-20T17:02:18Z" finished-at="2018-09-20T17:02:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- lowestprice -->
       </class> <!-- com.test.automation.PcBuild.TC002_Lowest_Price_Comparison -->
     </test> <!-- LowestPrice -->
-    <test name="TotalCosting" duration-ms="453" started-at="2018-07-21T14:36:20Z" finished-at="2018-07-21T14:36:21Z">
+    <test name="TotalCosting" duration-ms="6265" started-at="2018-09-20T17:02:18Z" finished-at="2018-09-20T17:02:24Z">
       <class name="com.test.automation.PcBuild.TC0003_Total_Cost_Value">
-        <test-method status="PASS" signature="Total_Cost()[pri:0, instance:com.test.automation.PcBuild.TC0003_Total_Cost_Value@127982]" name="Total_Cost" duration-ms="450" started-at="2018-07-21T14:36:20Z" finished-at="2018-07-21T14:36:21Z">
+        <test-method status="PASS" signature="Total_Cost()[pri:0, instance:com.test.automation.PcBuild.TC0003_Total_Cost_Value@149cea0]" name="Total_Cost" duration-ms="6265" started-at="2018-09-20T17:02:18Z" finished-at="2018-09-20T17:02:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Total_Cost -->

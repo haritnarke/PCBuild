@@ -47,7 +47,7 @@ public void getproductprices(String propertiesValue) {
 	SearchClick.click();
 	scrolldown(400);
 	ProductLink.click();
-	scrolldown(400);
+	//scrolldown(400);
 }
 
 
